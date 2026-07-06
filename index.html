@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LaunchCraft helps founders design, build, and ship beautiful products faster."
+    />
+    <title>LaunchCraft — Ship beautiful products faster</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a href="#top" class="brand" aria-label="LaunchCraft home">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span class="brand-name">LaunchCraft</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="nav-cta" href="#contact">Get started</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <p class="eyebrow">For ambitious founders</p>
+          <h1>Ship beautiful products, faster.</h1>
+          <p class="lede">
+            LaunchCraft is a calm, opinionated toolkit that takes your idea
+            from sketch to launch-ready — without the busywork.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start a project</a>
+            <a class="btn btn-ghost" href="#features">See what's inside</a>
+          </div>
+          <ul class="hero-meta" aria-label="Highlights">
+            <li><strong>14-day</strong> setup</li>
+            <li><strong>Zero</strong> lock-in</li>
+            <li><strong>Built-in</strong> analytics</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 id="features-title">Everything you need to launch</h2>
+            <p>
+              Three focused modules that work together — and stand alone when
+              you need them to.
+            </p>
+          </header>
+
+          <ul class="feature-grid" role="list">
+            <li class="feature-card">
+              <div class="feature-icon" aria-hidden="true">✦</div>
+              <h3>Design system</h3>
+              <p>
+                Tokens, components, and layouts ready to drop into any stack —
+                accessible by default, themable in minutes.
+              </p>
+            </li>
+            <li class="feature-card">
+              <div class="feature-icon" aria-hidden="true">⚡</div>
+              <h3>Ship pipeline</h3>
+              <p>
+                A single command takes you from commit to production with
+                preview URLs, rollbacks, and environment secrets handled.
+              </p>
+            </li>
+            <li class="feature-card">
+              <div class="feature-icon" aria-hidden="true">◎</div>
+              <h3>Founder analytics</h3>
+              <p>
+                See activation, retention, and revenue in one calm dashboard —
+                no SQL required, no dashboards to build.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="container about-inner">
+          <div class="about-copy">
+            <p class="eyebrow">Our story</p>
+            <h2 id="about-title">Built by makers, for makers.</h2>
+            <p>
+              LaunchCraft started in a tiny coworking space when our founders
+              kept rebuilding the same launch scaffolding for every new idea.
+              We figured there had to be a better way — so we built it.
+            </p>
+            <p>
+              Today we help independent founders and small teams ship with the
+              polish of a much larger company, without the overhead.
+            </p>
+            <dl class="about-stats">
+              <div>
+                <dt>Founders served</dt>
+                <dd>2,400+</dd>
+              </div>
+              <div>
+                <dt>Products launched</dt>
+                <dd>11k</dd>
+              </div>
+              <div>
+                <dt>Average time saved</dt>
+                <dd>6 weeks</dd>
+              </div>
+            </dl>
+          </div>
+          <aside class="about-card" aria-label="What we believe">
+            <h3>What we believe</h3>
+            <ul>
+              <li>Ship small, ship often.</li>
+              <li>Defaults beat decisions.</li>
+              <li>Calm tools make calm teams.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-inner">
+          <header class="section-header">
+            <h2 id="contact-title">Let's build something.</h2>
+            <p>
+              Tell us a little about your project and we'll be in touch within
+              two business days.
+            </p>
+          </header>
+
+          <form class="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="project">Project</label>
+              <textarea id="project" name="project" rows="4" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="advisor-chat" hidden aria-live="polite">
+            <header class="advisor-chat-header">
+              <span class="advisor-avatar" aria-hidden="true">◆</span>
+              <div>
+                <p class="advisor-eyebrow">LaunchCraft Advisor</p>
+                <p class="advisor-subtitle">Your project's AI critique is ready.</p>
+              </div>
+            </header>
+            <article class="advisor-message">
+              <p class="advisor-reply"></p>
+              <p class="advisor-footer-note">
+                A LaunchCraft team member will follow up at the email you
+                shared within two business days.
+              </p>
+              <button class="btn btn-ghost advisor-reset" type="button">
+                Start over
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p class="footer-brand">
+          <span aria-hidden="true">◆</span> LaunchCraft
+        </p>
+        <p class="footer-meta">
+          © <span id="year">2026</span> LaunchCraft, Inc. — A fictional company.
+        </p>
+        <ul class="footer-links" aria-label="Footer">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
