@@ -6,13 +6,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "http://localhost:5175"
-  ]
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -70,6 +64,9 @@ console.dir(session, { depth: null });
 const sessionId = session.id;
 
 const advisorPrompt = [
+  `Founder name: ${name}`,
+  `Founder email: ${email}`,
+  "",
   "Project description:",
   project
 ].join("\n");
@@ -107,11 +104,9 @@ for (const line of body.split("\n")) {
 }
 
 if (!reply) {
-  console.error("AdaL API error:", detail);
-
-return res.status(502).json({
-  error: "The advisor is temporarily unavailable. Please try again in a moment."
-});
+  return res.status(502).json({
+    error: "The advisor didn't return a response."
+  });
 }
 
 return res.json({
@@ -125,6 +120,22 @@ return res.json({
     error: err.message
   });
 }
+});
+
+app.get("/api/agents", async (req, res) => {
+  try {
+    const response = await fetch("https://cloud.adal.sylph.ai/v1/agents", {
+      headers: {
+        Authorization: `Bearer ${process.env.ADAL_API_TOKEN}`
+      }
+    });
+
+    const text = await response.text();
+    res.status(response.status).send(text);
+
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 });
 
 app.listen(3001, () => {
